@@ -1,0 +1,19 @@
+network:
+  cluster-domain: swarm.example.com
+nodes:
+  hostname1:
+    type: master
+    machine-driver: vmwarevsphere
+    driver-opts: "--vmwarevsphere-username=username --vmwarevsphere-password=password --vmwarevsphere-vcenter=ip --vmwarevsphere-datastore=datastore --vmwarevsphere-network='VM Network'"
+    engine-opts:
+  hostname2:
+    type: worker
+    machine-driver: vmwarevsphere
+    driver-opts: "--vmwarevsphere-username=username --vmwarevsphere-password=password --vmwarevsphere-vcenter=ip --vmwarevsphere-datastore=datastore --vmwarevsphere-network='VM Network'"
+    engine-opts:
+  hostname3:
+    type: worker
+    machine-driver: generic
+    driver-opts:
+    engine-opts:
+    cluster-interface: eth2
